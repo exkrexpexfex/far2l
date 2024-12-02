@@ -1175,12 +1175,11 @@ static void AnalyzeFileItem(HANDLE hDlg, PluginPanelItem *FileItem, const wchar_
 	if (hPlugin != INVALID_HANDLE_VALUE) {
 		if (!CtrlObject->Plugins.UseFarCommand(hPlugin, PLUGIN_FARGETFILES)) {
 			FARString strTempDir;
-			FarMkTempEx(strTempDir);
-			apiCreateDirectory(strTempDir, nullptr);
-
 			bool GetFileResult = false;
 			{
 				PluginLocker Lock;
+				FarMkTempEx(strTempDir);
+				apiCreateDirectory(strTempDir, nullptr);
 				GetFileResult = CtrlObject->Plugins.GetFile(hPlugin, FileItem, strTempDir, FileToScan,
 										OPM_SILENT | OPM_FIND)
 						!= FALSE;
@@ -1523,9 +1522,9 @@ static LONG_PTR WINAPI FindDlgProc(HANDLE hDlg, int Msg, int Param1, LONG_PTR Pa
 
 								ClosePlugin = true;
 							}
+							PluginLocker Lock;
 							FarMkTempEx(strTempDir);
 							apiCreateDirectory(strTempDir, nullptr);
-							PluginLocker Lock;
 							bool bGet = GetPluginFile(FindItem.ArcIndex, FindItem.FindData, strTempDir,
 									strSearchFileName);
 							itd.SetFindListItem(ItemIndex, FindItem);
