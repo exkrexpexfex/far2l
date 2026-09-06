@@ -282,7 +282,7 @@ inline static void ShowProcessListTitle(VMenu &ProcList, bool refresh, int sort_
 	ProcList.SetTitle(title);
 }
 
-void ShowProcessList()
+void ShowProcessList(Panel *ActivePanel)
 {
 	MenuDataEx dummy{L"", 0, 0}; // will refresh immediately
 	VMenu ProcList(nullptr/*Msg::ProcessListTitle*/, &dummy, 1, ScrY - 4);
@@ -465,6 +465,18 @@ void ShowProcessList()
 			keep = AT_BOTTOM;
 			ProcList.ProcessInput();
 			break;
+#ifdef __linux__
+		case KEY_CTRLF10:
+			if (ActivePanel) {
+				FARString strProcDir;
+				strProcDir.Format(L"/proc/%d", v[ProcList.GetSelectPos()].pid);
+				if (CheckShortcutFolder(strProcDir, true)) {
+					ActivePanel->SetCurDir(strProcDir, TRUE);
+					return;
+				}
+			}
+			break;
+#endif
 		case KEY_NONE: case KEY_IDLE:
 			break;
 		default:

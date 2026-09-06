@@ -1900,14 +1900,15 @@ $ #Előzmények: mappa előzmények#
 $ #Futó programok#
     The task list displays active tasks.
 
-    #Del#                Kill process: sends SIGTERM and checks if process really exited as result
-    #Shift-Del#          Kill process: sends SIGKILL
+    #Del#                Kill process: sends #SIGTERM# and checks if process really exited as result
+    #Shift-Del#          Kill process: sends #SIGKILL#
     #Ctrl-R#             Autorefresh on/off (if on, autorefresh each 1 s)
-    #t/T#                Sort by name
-    #i/I#                Sort by PID
-    #p/P#                Sort by CPU
-    #m/M#                Sort by memory (Resident Set Size, RSS)
+    #t#/#T#                Sort by name
+    #i#/#I#                Sort by PID
+    #p#/#P#                Sort by CPU
+    #m#/#M#                Sort by memory (Resident Set Size, RSS)
     #Ctrl-Alt-F#         Filter list items
+    #Ctrl-F10#           Go to #/proc/PID# directory in active panel (only in Linux)
 
     See also: common ~menu~@MenuCmd@ keyboard commands.
 
