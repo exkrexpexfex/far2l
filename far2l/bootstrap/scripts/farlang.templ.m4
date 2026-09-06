@@ -18775,6 +18775,17 @@ QuickViewFiles
 "Файлів"
 "Файлаў"
 
+QuickViewDevices
+"Устройств"
+"Devices"
+upd:"Devices"
+upd:"Devices"
+upd:"Devices"
+upd:"Devices"
+upd:"Devices"
+upd:"Devices"
+upd:"Devices"
+
 QuickViewBytes
 "Размер файлов"
 "Files size"
