@@ -446,9 +446,7 @@ void ShowProcessList()
 
 			ProcList.Show();
 			last_refresh = GetProcessUptimeMSec();
-			if (autorefresh) {
-				schedule_refresh = last_refresh + AUTOREFRESH_MSEC;
-			}
+			schedule_refresh = autorefresh ? last_refresh + AUTOREFRESH_MSEC : 0;
 		}
 		FarKey key = ProcList.ReadInput();
 		switch (key) {
