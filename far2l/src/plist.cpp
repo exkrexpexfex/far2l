@@ -284,7 +284,7 @@ inline static void ShowProcessListTitle(VMenu &ProcList, bool refresh, int sort_
 
 void ShowProcessList()
 {
-	MenuDataEx dummy; // will refresh immediately
+	MenuDataEx dummy{L"", 0, 0}; // will refresh immediately
 	VMenu ProcList(nullptr/*Msg::ProcessListTitle*/, &dummy, 1, ScrY - 4);
 
 	ProcList.SetPosition(-1, -1, 0, 0);
