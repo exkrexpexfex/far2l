@@ -18588,15 +18588,15 @@ DragCopy
 
 ProcessListTitle
 l:
-"Список задач (Time, PID, User, Name, CPU, RSS)"
-"Task list (Time, PID, User, Name, CPU, RSS)"
-"Seznam úloh (Time, PID, User, Name, CPU, RSS)"
-"Taskliste (Time, PID, User, Name, CPU, RSS)"
-"Futó programok (Time, PID, User, Name, CPU, RSS)"
-"Lista zadań (Time, PID, User, Name, CPU, RSS)"
-"Lista de tareas (Time, PID, User, Name, CPU, RSS)"
-"Список завдань (Time, PID, User, Name, CPU, RSS)"
-"Спіс &заданняў (Time, PID, User, Name, CPU, RSS)"
+"Список задач (Time, PID, User, Name, CPU, RSS), Автообновление: %s, Сортировка: %c"
+"Task list (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
+"Seznam úloh (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
+"Taskliste (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
+"Futó programok (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
+"Lista zadań (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
+"Lista de tareas (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
+"Список завдань (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
+"Спіс &заданняў (Time, PID, User, Name, CPU, RSS), AutoRefresh: %s, Sort: %c"
 
 ProcessListBottom
 "Ctrl+R, Kill: [Shift+]Del Sort: t/T time, n/N name, i/I PID, c/C CPU, m/M RSS, Search: ^⌥F"
